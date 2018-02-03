@@ -5,8 +5,8 @@ const PLANT = document.getElementById("plant");
 
 var increment = 30;
 
-var health = 60;
-setHealth(60);
+var health = 50;
+setHealth(50);
 var blink = true;
 
 var d = new Date();
@@ -128,7 +128,7 @@ function updateTime() {
     time += d.getMinutes();
   }
 
-  if(d.getHours > 12) {
+  if(d.getHours() > 12) {
     time += " PM";
   } else {
     time += " AM";
@@ -138,8 +138,6 @@ function updateTime() {
 
   TIME.innerHTML = time;
 }
-
-var name;
 
 updateTime();
 setInterval(updateTime, 1000);
