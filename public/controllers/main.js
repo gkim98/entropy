@@ -200,6 +200,7 @@ CHALLENGE_CHECK.addEventListener("click", function(event) {
     ACCERSORY.style.visibility = "visible"
 
     firebase.database().ref('/users/' + user).on('value', function(response) {
+        console.log(response.accessories);
         writeUserData(user, response.name, response.accessories.push(randInt));
 
     });
