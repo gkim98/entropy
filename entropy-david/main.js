@@ -1,12 +1,8 @@
 const BG = document.getElementById("background");
 const TIME = document.getElementById("time");
 const WEEKDAY = document.getElementById("weekday");
+const PLANT = document.getElementById("plants");
 
-const HAPPY = document.getElementById("plant-happy");
-const SAD = document.getElementById("plant-sad");
-const NEUTRAL = document.getElementById("plant-neutral");
-HAPPY.style.opacity = 0;
-SAD.style.opacity = 0;
 
 var health = 50;
 setHealth(50);
@@ -38,8 +34,7 @@ var original;
 
 function startHealthUp() {
   original = health;
-  NEUTRAL.style.opacity = 0;
-  HAPPY.style.opacity = 1;
+  PLANT.src = "images/plant/happy.png";
   myVar = setInterval(healthUp, 1);
 }
 
@@ -54,8 +49,7 @@ function healthDown() {
 
 function startHealthDown() {
   original = health;
-  NEUTRAL.style.opacity = 0;
-  SAD.style.opacity = 1;
+  PLANT.src = "images/plant/sad.png";
   myVar = setInterval(healthDown, 1);
 }
 
