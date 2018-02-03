@@ -75,8 +75,8 @@ img{
 
 #view {
   position: absolute;
-  fill: gray;
-  opacity: 80%;
+  fill: black;
+  opacity: .7;
   top: 0;
   right: 0;
 }
