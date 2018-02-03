@@ -40,7 +40,7 @@ $(".goodButton").on("click", function() {
         startHealthUp();
         var tempRand = getRandomInt(dailyQuestions.length-1);
         $(this).children(".task").html(dailyQuestions[tempRand]);
-        $(this).has("#challenge").html(challenges[tempRand]);
+        $(this).has("#challenge").children("#challenge").html(challenges[tempRand]);
         $(this).fadeIn();
     });
 });
