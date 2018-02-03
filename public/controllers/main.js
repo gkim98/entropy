@@ -71,6 +71,7 @@ function updateFace(newHealth) {
 
 function setHealth(health) {
   BG.style.filter = "saturate(" + (health) + "%)";
+
 }
 
 function healthUp() {
@@ -156,7 +157,9 @@ NAME_FIELD.addEventListener("keyup", function(event) {
         NAME.innerHTML = name;
 
         // database part
-        writeUserData(user, name, []);
+        firebase.database().ref('/users/' + user).on('value', function(response) {
+            writeUserData(user, name, response.accessories);
+        });
     }
 });
 
