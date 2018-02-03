@@ -3,6 +3,10 @@ const TIME = document.getElementById("time");
 const WEEKDAY = document.getElementById("weekday");
 const PLANT = document.getElementById("plant");
 
+// variable for your writeAccessories
+var myAccessories = [];
+
+
 var increment = 20;
 
 var health = 50;
@@ -200,9 +204,12 @@ CHALLENGE_CHECK.addEventListener("click", function(event) {
     var ACCERSORY = document.getElementById(accessories[randInt].id);
     ACCERSORY.style.visibility = "visible"
 
-    firebase.database().ref('/users/' + user).on('value', function(response) {
-        console.log(response.accessories);
-        writeUserData(user, response.name, response.accessories.push(randInt));
+    myAccessories.push(randInt);
+    console.log(myAccessories);
 
-    });
+    // firebase.database().ref('/users/' + user).on('value', function(response) {
+    //     console.log(response.accessories);
+    //     writeUserData(user, response.name, response.accessories.push(randInt));
+    //
+    // });
 });

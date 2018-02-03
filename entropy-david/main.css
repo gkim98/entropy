@@ -1,0 +1,61 @@
+@font-face {
+  font-family: time;
+  src: url(fonts/Lato-Medium.ttf);
+}
+
+h1, h2 {
+  font-family: time;
+  text-shadow: 1px 1px #3C3C3C;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("images/pic3/Healthy.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+#time {
+  position: absolute;
+  top: -40px;
+  left: 40px;
+  color: white;
+  font-size: 100px;
+}
+
+#weekday {
+  position: absolute;
+  top: 85px;
+  left: 50px;
+  font-size: 40px;
+  font-size: 50px;
+  color: white;
+}
+
+#view {
+  position: absolute;
+  fill: black;
+  opacity: .7;
+  top: 0;
+  right: 0;
+}
+
+.plant {
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  width: 25%;
+}

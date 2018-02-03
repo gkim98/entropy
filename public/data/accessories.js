@@ -11,9 +11,6 @@
 
 var accessories = [
     {
-         id: "placeholder"    
-    },
-    {
          id: "glasses",
          img: "/images/accessories/glasses.png",
          width: "40%",
