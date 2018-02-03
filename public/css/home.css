@@ -56,6 +56,14 @@ body, html {
     margin-top: 0px;
 }
 
+#facebook {
+    border-color: #2d5073;
+    background-color: #3b5998;
+    color: white;
+    outline: none;
+    font-family: time;
+}
+
 img {
     width: 100%;
 }

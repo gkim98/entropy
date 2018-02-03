@@ -8,8 +8,6 @@
         <script src="/libs/jquery-3.3.1.min.js" charset="utf-8"></script>
     </head>
     <body>
-
-
 <!-- actual product -->
         <div class="bg" id="background">
             <div id="timeDate">
@@ -19,6 +17,9 @@
                 <h2 id="weekday">
                   Weekday
                 </h2>
+
+                <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button> -->
+                <button type="button" name="button" id="facebook">Connect with Facebook</button>
             </div>
 
 
@@ -64,6 +65,7 @@
             </div>
         </div>
     </body>
+    <script src="/config/facebook.js" charset="utf-8"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
@@ -71,4 +73,5 @@
     <script src="/config/config.js" charset="utf-8"></script>
     <script src="/controllers/home.js" charset="utf-8"></script>
     <script src="/controllers/main.js" charset="utf-8"></script>
+    <script src="/controllers/facebookAuth.js" charset="utf-8"></script>
 </html>

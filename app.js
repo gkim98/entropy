@@ -2,6 +2,9 @@ var express = require("express");
 var app = express();
 var request = require("request");
 var bodyParser = require("body-parser");
+var firebase = require("firebase/app");
+require("firebase/auth");
+require("firebase/database");
 
 app.set('port', (process.env.PORT || 5000));
 
