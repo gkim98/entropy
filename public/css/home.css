@@ -4,7 +4,7 @@
   src: url(/fonts/Lato-Medium.ttf);
 }
 
-h1, h2 {
+h1, h2, p {
   font-family: time;
   text-shadow: 1px 1px #3C3C3C;
 }
@@ -85,6 +85,30 @@ img {
     transform: translate(0, -20%);
 }
 
+#glasses {
+  position: absolute;
+  width: 40%;
+  top: 30%; bottom: 0; left: 0; right: 0;
+  left: 50%;
+  transform: translate(-50%, 280%);
+}
+
+#moustache {
+  position: absolute;
+  width: 30%;
+  top: 30%; bottom: 0; left: 0; right: 0;
+  left: 50%;
+  transform: translate(-50%, 700%);
+}
+
+#bow {
+  position: absolute;
+  width: 30%;
+  top: 30%; bottom: 0; left: 0; right: 0;
+  left: 50%;
+  transform: translate(-95%, 110%);
+}
+
 #view {
   position: absolute;
   fill: gray;
@@ -97,7 +121,7 @@ img {
     float: right;
     background-color: rgba(0,0,0,0.8);
     width: 25%;
-    height: 80%;
+    height: auto;
     border-radius: 10px;
     color: white;
     padding: 2px;
