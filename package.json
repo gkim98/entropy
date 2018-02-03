@@ -1,0 +1,24 @@
+{
+  "name": "entropy",
+  "version": "1.0.0",
+  "description": "Blueprint 2018 Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkim98/entropy.git"
+  },
+  "author": "Grant Kim, David Cheng, Daniel Zhou, Jane Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gkim98/entropy/issues"
+  },
+  "homepage": "https://github.com/gkim98/entropy#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
