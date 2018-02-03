@@ -16,3 +16,7 @@ function setName(user) {
         NAME.innerHTML = response.val().name;
     });
 }
+
+function writeAccessories() {
+
+}
