@@ -36,13 +36,21 @@ CHALLENGE.innerHTML = challenges[getRandomInt(challenges.length-1)]
 
 
 $(".goodButton").on("click", function() {
-    $(this).parent().parent().fadeOut();
-    startHealthUp();
+    $(this).parent().parent().fadeOut("slow", function () {
+        startHealthUp();
+        var tempRand = getRandomInt(dailyQuestions.length-1);
+        $(this).children(".task").html(dailyQuestions[tempRand]);
+        $(this).fadeIn();
+    });
 });
 
 $(".badButton").on("click", function() {
-    $(this).parent().parent().fadeOut();
-    startHealthDown();
+    $(this).parent().parent().fadeOut("slow", function () {
+        startHealthDown();
+        var tempRand = getRandomInt(dailyQuestions.length-1);
+        $(this).children(".task").html(dailyQuestions[tempRand]);
+        $(this).fadeIn();
+    });
 });
 
 // Hide scrollbars and disable scrolling
