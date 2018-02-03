@@ -3,8 +3,8 @@ const TIME = document.getElementById("time");
 const WEEKDAY = document.getElementById("weekday");
 const PLANT = document.getElementById("plant");
 
-// // variable for your writeAccessories
-// var myAccessories = [];
+// variable for your writeAccessories
+var myAccessories = [];
 
 
 var increment = 20;
