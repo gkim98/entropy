@@ -107,6 +107,24 @@ img {
     flex-direction: column;
 }
 
+.center {
+  text-align: center;
+}
+
+#questionBox2 {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 8%;
+    border-radius: 5px;
+    color: white;
+
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
 #logo {
     width: 80%;
     padding: 10%;
