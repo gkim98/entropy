@@ -38,7 +38,7 @@ var accessories = [
         id: "cowboyHat",
         img: "/images/accessories/cowboyHat.png",
         width: "40%",
-        transform: "translate(-97%, -220%) rotate(-10deg)"
+        transform: transform: "translate(5%, -150%) rotate(10deg)"
 
     },
     petPlant = {
@@ -46,6 +46,12 @@ var accessories = [
         img: "/images/accessories/petPlant.png",
         width: "40%",
         transform: "translate(-200%, 80%)"
+    },
+    paw = {
+      id: "paw",
+      img: "/images/accessories/paw.png",
+      width: "20%",
+      transform: "translate(90%, 380%)"
     }
 ]
 
