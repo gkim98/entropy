@@ -1,4 +1,5 @@
 var loggedIn = false;
+var user = "";
 
 window.fbAsyncInit = function() {
     FB.init({
@@ -13,10 +14,13 @@ window.fbAsyncInit = function() {
     FB.getLoginStatus(function(response) {
         if(response.status == 'connected') {
             loggedIn = true;
+            user = response.authResponse.userID;
+            $("#facebook").text("Logout");
+        } else {
+            $("#facebook").text("Connect with Facebook");
         }
         console.log(loggedIn);
     });
-
   };
 
   (function(d, s, id){
@@ -33,14 +37,6 @@ window.fbAsyncInit = function() {
 //     status     : true,
 //     xfbml      : true,
 //     version    : 'v2.12'
-// });
-//
-// var loggedIn = false;
-//
-// FB.getLoginStatus(function(response) {
-//     if(response.status == 'connected') {
-//         loggedIn = true;
-//     }
 // });
 //
 // FB.Event.subscribe('auth.authResponseChange', checkLoginState);

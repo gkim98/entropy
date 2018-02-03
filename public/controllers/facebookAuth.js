@@ -6,19 +6,23 @@
 //     // if(respon
 // });
 
-$("#facebook").on("click", function () {
+$("#facebook").on("click", function() {
     console.log("event triggered");
     if(loggedIn == false) {
         FB.login(function(response) {
             // var token = result.credential.accessToken;
-            var user = response.user;
+            $(this).text("Logout");
         }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
             var email = error.email;
         });
     } else {
-
+        FB.logout(function(response) {
+            $(this).text("Connect with Facebook");
+        }).catch(function(error) {
+            var errorCode = error.code;
+        });
     }
 });
 
