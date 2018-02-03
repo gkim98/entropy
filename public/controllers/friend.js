@@ -9,7 +9,7 @@ $("#person1").on("mouseenter", function() {
     document.getElementById(accessories[5].id).style.visibility = "visible"
     document.getElementById(accessories[3].id).style.visibility = "visible"
 
-    NAME.innerHTML = "Stacy's Mom";
+    NAME.innerHTML = "Danosore";
 
 });
 
