@@ -11,7 +11,7 @@
 
 h1 {
   font-family: time;
-  text-shadow: 1px 1px #3C3C3C;
+  text-shadow: 2px 2px #3C3C3C;
 }
 
 h2, p {
@@ -32,7 +32,7 @@ body, html {
 
 .bg {
     /* The image used */
-    background-image: url("/images/pic1/Healthy.png");
+    background-image: url("/images/pic3/Healthy.png");
 
     /* Full height */
     height: 100%;
@@ -67,6 +67,7 @@ body, html {
     font-size: 40px;
     color: white;
     margin-top: -20px;
+    text-shadow: 2px 2px #3C3C3C;
 }
 
 #facebook {
@@ -75,6 +76,9 @@ body, html {
     color: white;
     outline: none;
     font-family: time;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 
 img {
