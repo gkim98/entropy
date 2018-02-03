@@ -167,7 +167,7 @@ NAME_FIELD.addEventListener("keyup", function(event) {
 
         // database part
         firebase.database().ref('/users/' + user).on('value', function(response) {
-            writeUserData(user, name, response.accessories);
+            writeUserData(user, name, [0]);
         });
     }
 });
@@ -201,8 +201,6 @@ CHALLENGE_CHECK.addEventListener("click", function(event) {
 
     firebase.database().ref('/users/' + user).on('value', function(response) {
         writeUserData(user, response.name, response.accessories.push(randInt));
+
     });
-
-
-
 });
