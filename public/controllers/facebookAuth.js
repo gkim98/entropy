@@ -13,6 +13,7 @@ $("#facebook").on("click", function() {
             // var token = result.credential.accessToken;
             $(this).text("Logout");
             user = response.userID;
+            setName(user);
         }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
