@@ -9,6 +9,10 @@ h1, h2 {
   text-shadow: 1px 1px #3C3C3C;
 }
 
+h2 {
+  margin-top: 0;
+}
+
 body, html {
     height: 100%;
     margin: 0;

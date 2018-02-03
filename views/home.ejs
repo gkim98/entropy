@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>entropy</title>
+        <script src="/data/questions.js"></script>
         <link rel="stylesheet" href="/css/home.css" type="text/css">
         <script src="/libs/jquery-3.3.1.min.js" charset="utf-8"></script>
     </head>
@@ -28,10 +29,12 @@
 
             <div id="questionBox">
                 <img id="logo" src="/images/logo/entropy.png" alt="">
-
+                <h2>Daily Goals</h2>
                 <div class="question">
-                    <span class="task">
-                        Recycle Today
+
+
+                    <span id="dailyGoal1" class="task">
+                        Daily Goal #1
                     </span>
                     <div class="buttons">
                         <button type="button" class="Cbutton badButton" name="button"></button>
@@ -39,8 +42,19 @@
                     </div>
                 </div>
                 <div class="question">
-                    <span class="task">
-                        Shower for less than 15 minutes
+                    <span id="dailyGoal2" class="task">
+                        Daily Goal #2
+                    </span>
+                    <div class="buttons">
+                        <button type="button" class="Cbutton badButton" name="button"></button>
+                        <button type="button" class="Cbutton goodButton" name="button"></button>
+                    </div>
+                </div>
+
+                <h2>Current Challenge:</h2>
+                <div class="question">
+                    <span id="challenge" class="task">
+                        CHALLENGE
                     </span>
                     <div class="buttons">
                         <button type="button" class="Cbutton badButton" name="button"></button>

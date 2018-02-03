@@ -5,7 +5,6 @@ const PLANT = document.getElementById("plant");
 
 var increment = 30;
 
-
 var health = 60;
 setHealth(60);
 var blink = true;
@@ -13,6 +12,28 @@ var blink = true;
 var d = new Date();
 var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var hours = ["12", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+const DAILY_GOAL_1 = document.getElementById("dailyGoal1");
+const DAILY_GOAL_2 = document.getElementById("dailyGoal2");
+const CHALLENGE = document.getElementById("challenge");
+
+var rand1 = getRandomInt(dailyQuestions.length-1);
+var rand2 = getRandomInt(dailyQuestions.length-1);
+
+while( rand1 == rand2 ) {
+  var rand2 = getRandomInt(dailyQuestions.length-1);
+}
+
+DAILY_GOAL_1.innerHTML = dailyQuestions[rand1];
+DAILY_GOAL_2.innerHTML = dailyQuestions[rand2];
+CHALLENGE.innerHTML = challenges[getRandomInt(challenges.length-1)]
+
+
+
 
 $(".goodButton").on("click", function() {
     $(this).parent().parent().fadeOut();

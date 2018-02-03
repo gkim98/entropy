@@ -12,7 +12,7 @@ var dailyQuestions = [
   "Did you wash clothes in cold water?"
 ];
 
-var goals = [
+var challenges = [
   "Replace your lightbulbs with LEDs",
   "Install a programmable thermostat",
   "Use low flow faucets and shower heads",
