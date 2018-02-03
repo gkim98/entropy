@@ -50,7 +50,7 @@ $(".badButton").on("click", function() {
         startHealthDown();
         var tempRand = getRandomInt(dailyQuestions.length-1);
         $(this).children(".task").html(dailyQuestions[tempRand]);
-        $(this).has("#challenge").html(challenges[tempRand]);
+        $(this).has("#challenge").children("#challenge").html(challenges[tempRand]);
         $(this).fadeIn();
     });
 });
@@ -156,7 +156,7 @@ NAME_FIELD.addEventListener("keyup", function(event) {
         NAME.innerHTML = name;
 
         // database part
-        writeUserData(user, name, 0);
+        writeUserData(user, name, []);
     }
 });
 
@@ -183,6 +183,14 @@ for (i = 0; i < accessories.length; i++) {
 CHALLENGE_CHECK = document.getElementById("challengeComplete");
 
 CHALLENGE_CHECK.addEventListener("click", function(event) {
-    var ACCERSORY = document.getElementById(accessories[getRandomInt(accessories.length)].id);
+    var randInt = getRandomInt(accessories.length);
+    var ACCERSORY = document.getElementById(accessories[randInt].id);
     ACCERSORY.style.visibility = "visible"
+
+    firebase.database().ref('/users/' + user).on('value', function(response) {
+        writeUserData(user, response.name, response.accessories.push(randInt));
+    });
+
+
+
 });

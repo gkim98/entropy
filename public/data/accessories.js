@@ -47,4 +47,6 @@ var accessories = [
         width: "40%",
         transform: "translate(-200%, 80%)"
     }
-];
+]
+
+console.log(accessories[0]);
