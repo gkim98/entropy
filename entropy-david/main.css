@@ -15,7 +15,7 @@ body, html {
 
 .bg {
     /* The image used */
-    background-image: url("images/pic1/Healthy.png");
+    background-image: url("images/pic3/Healthy.png");
 
     /* Full height */
     height: 100%;
@@ -58,25 +58,25 @@ img{
 
 #time {
   position: absolute;
-  top: -20px;
+  top: -40px;
   left: 40px;
   color: white;
-  font-size: 80px;
+  font-size: 100px;
 }
 
 #weekday {
   position: absolute;
-  top: 80px;
+  top: 85px;
   left: 50px;
   font-size: 40px;
-  font-size: 40px;
+  font-size: 50px;
   color: white;
 }
 
 #view {
   position: absolute;
-  fill: gray;
-  opacity: 80%;
+  fill: black;
+  opacity: .7;
   top: 0;
   right: 0;
 }
