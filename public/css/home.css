@@ -4,18 +4,30 @@
   src: url(/fonts/Lato-Medium.ttf);
 }
 
-h1, h2, p {
+@font-face {
+  font-family: body;
+  src: url(/fonts/OpenSans-Regular.ttf);
+}
+
+h1 {
   font-family: time;
   text-shadow: 1px 1px #3C3C3C;
 }
 
-h2 {
+h2, p {
+  font-family: body;
   margin-top: 0;
 }
 
 body, html {
     height: 100%;
     margin: 0;
+}
+
+.accessories {
+     position: absolute;
+     top: 30%; bottom: 0; left: 0; right: 0;
+     left: 50%;
 }
 
 .bg {
@@ -83,30 +95,6 @@ img {
     top: 30%; bottom: 0; left: 0; right: 0;
     margin: 0;
     transform: translate(0, -20%);
-}
-
-#glasses {
-  position: absolute;
-  width: 40%;
-  top: 30%; bottom: 0; left: 0; right: 0;
-  left: 50%;
-  transform: translate(-50%, 280%);
-}
-
-#moustache {
-  position: absolute;
-  width: 30%;
-  top: 30%; bottom: 0; left: 0; right: 0;
-  left: 50%;
-  transform: translate(-50%, 700%);
-}
-
-#bow {
-  position: absolute;
-  width: 30%;
-  top: 30%; bottom: 0; left: 0; right: 0;
-  left: 50%;
-  transform: translate(-95%, 110%);
 }
 
 #view {

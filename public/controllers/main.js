@@ -71,7 +71,6 @@ function healthUp() {
     setHealth(health)
   }
 
-  console.log(health);
 }
 
 var original;
@@ -90,8 +89,6 @@ function healthDown() {
     health -= 0.2;
     setHealth(health)
   }
-
-  console.log(health);
 }
 
 function startHealthDown() {
@@ -158,4 +155,23 @@ NAME_FIELD.addEventListener("keyup", function(event) {
 NAME.addEventListener("dblclick", function(event) {
   document.getElementById("questionBox2").style.visibility = "visible";
   NAME.style.visibility = "hidden"
+});
+
+
+function addStyleString(str) {
+    var node = document.createElement('style');
+    node.innerHTML = str;
+    document.body.appendChild(node);
+}
+
+for (i = 0; i < accessories.length; i++) {
+  addStyleString("#"+ accessories[i].id +"{width: " + accessories[i].width + "; transform: " + accessories[i].transform + ";}");
+
+}
+
+CHALLENGE_CHECK = document.getElementById("challengeComplete");
+
+CHALLENGE_CHECK.addEventListener("click", function(event) {
+    var ACCERSORY = document.getElementById(accessories[getRandomInt(accessories.length - 1)].id);
+    ACCERSORY.style.visibility = "visible"
 });
