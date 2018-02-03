@@ -54,5 +54,3 @@ var accessories = [
       transform: "translate(90%, 380%)"
     }
 ]
-
-console.log(accessories[0]);

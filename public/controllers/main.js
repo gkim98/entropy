@@ -3,7 +3,7 @@ const TIME = document.getElementById("time");
 const WEEKDAY = document.getElementById("weekday");
 const PLANT = document.getElementById("plant");
 
-var increment = 30;
+var increment = 20;
 
 var health = 50;
 setHealth(50);
@@ -59,9 +59,9 @@ $(".badButton").on("click", function() {
 $("body").css("overflow", "hidden");
 
 function updateFace(newHealth) {
-  if (newHealth<40) {
+  if (newHealth < 50-(2*increment) ) {
     PLANT.src = "/images/plant/sad.png";
-  } else if(newHealth>60) {
+  } else if(newHealth>50+(2*increment) ) {
     PLANT.src = "/images/plant/happy.png";
   } else {
     PLANT.src = "/images/plant/neutral.png";
@@ -75,6 +75,10 @@ function setHealth(health) {
 }
 
 function healthUp() {
+  if(health>100) {
+    health = 100;
+  }
+
   if(health >= original + increment) {
     clearInterval(myVar);
   } else {
@@ -94,6 +98,11 @@ function startHealthUp() {
 }
 
 function healthDown() {
+  if(health<0) {
+    health = 0;
+  }
+
+
   if(health <= original - increment) {
     clearInterval(myVar);
   } else {
