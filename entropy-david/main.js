@@ -13,7 +13,7 @@ var hours = ["12", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "
 // $("body").css("overflow", "hidden");
 
 function changeHealth(health) {
-  SICK.style.filter = "opacity(" + (100 - health) + "%)";
+  SICK.style.filter = "saturate(" + (100 - health) + "%)";
 }
 
 function updateTime() {
@@ -44,9 +44,6 @@ function updateTime() {
 
   TIME.innerHTML = time;
 }
-
-//changeHealth(100);
-
 
 updateTime();
 setInterval(updateTime, 1000);
