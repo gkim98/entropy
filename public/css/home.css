@@ -59,8 +59,8 @@ body, html {
 
 #questionBox {
     float: right;
-    background-color: gray;
-    opacity: .8;
+    background-color: black;
+    opacity: .6;
     width: 30%;
     height: 100%;
     border-radius: 10px;
@@ -87,6 +87,7 @@ body, html {
 
 .buttons {
     flex-basis: 50%;
+    margin-right: 5%;
 }
 
 .Cbutton {
