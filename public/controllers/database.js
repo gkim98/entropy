@@ -1,11 +1,18 @@
-function writeUserData(user, name, accessories) {
-    firebase.database().ref('users/' + user).set({
+function writeUserData(help, name, accessories) {
+    firebase.database().ref('users/' + help).set({
         name: name,
         accessories: accessories
     });
 }
 
-$("body").on("click", function() {
-    console.log("added");
-    writeUserData(user, "John", 0);
-});
+function setName(user) {
+    // var readName = firebase.database().ref('users/' + user);
+    // readName.on('value', function(snapshot) {
+    //     console.log(snapshot.val());
+    //     return snapshot.val();
+    // });
+
+    firebase.database().ref('/users/' + user).on('value', function(response) {
+        NAME.innerHTML = response.val().name;
+    });
+}

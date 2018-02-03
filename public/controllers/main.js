@@ -138,6 +138,7 @@ updateTime();
 setInterval(updateTime, 1000);
 
 var name;
+
 const NAME_FIELD = document.getElementById("nameField")
 const NAME = document.getElementById("name")
 
@@ -148,6 +149,9 @@ NAME_FIELD.addEventListener("keyup", function(event) {
         document.getElementById("questionBox2").style.visibility = "hidden";
         NAME.style.visibility = "visible"
         NAME.innerHTML = name;
+
+        // database part
+        writeUserData(user, name, 0);
     }
 });
 

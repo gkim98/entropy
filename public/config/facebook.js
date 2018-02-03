@@ -13,13 +13,22 @@ window.fbAsyncInit = function() {
 
     FB.getLoginStatus(function(response) {
         if(response.status == 'connected') {
+            console.log('triggered');
             loggedIn = true;
             user = response.authResponse.userID;
             $("#facebook").text("Logout");
+
+
+            console.log("triggered");
+            document.getElementById("questionBox2").style.visibility = "hidden";
+            NAME.style.visibility = "visible"
+            setName(user);
+
+
+
         } else {
             $("#facebook").text("Connect with Facebook");
         }
-        console.log(loggedIn);
     });
   };
 
@@ -30,6 +39,7 @@ window.fbAsyncInit = function() {
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
 
 
 // FB.init({
