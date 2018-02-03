@@ -11,7 +11,7 @@ $("#facebook").on("click", function() {
     if(loggedIn == false) {
         FB.login(function(response) {
             // var token = result.credential.accessToken;
-            $(this).text("Logout");
+            $("#facebook").text("Logout");
             user = response.userID;
             setName(user);
         }).catch(function(error) {
@@ -21,7 +21,7 @@ $("#facebook").on("click", function() {
         });
     } else {
         FB.logout(function(response) {
-            $(this).text("Connect with Facebook");
+            $("#facebook").text("Connect with Facebook");
         }).catch(function(error) {
             var errorCode = error.code;
         });
