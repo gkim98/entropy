@@ -59,9 +59,9 @@ $(".badButton").on("click", function() {
 $("body").css("overflow", "hidden");
 
 function updateFace(newHealth) {
-  if (newHealth < 50-(2*increment) ) {
+  if (newHealth <= 50-(2*increment) ) {
     PLANT.src = "/images/plant/sad.png";
-  } else if(newHealth>50+(2*increment) ) {
+  } else if(newHealth >= 50+(2*increment) ) {
     PLANT.src = "/images/plant/happy.png";
   } else {
     PLANT.src = "/images/plant/neutral.png";
@@ -77,6 +77,7 @@ function setHealth(health) {
 function healthUp() {
   if(health>100) {
     health = 100;
+    clearInterval(myVar);
   }
 
   if(health >= original + increment) {
@@ -85,7 +86,6 @@ function healthUp() {
     health += 0.2;
     setHealth(health)
   }
-
 }
 
 var original;
@@ -100,6 +100,7 @@ function startHealthUp() {
 function healthDown() {
   if(health<0) {
     health = 0;
+    clearInterval(myVar);
   }
 
 
