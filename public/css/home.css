@@ -85,10 +85,11 @@ img {
     float: right;
     background-color: black;
     opacity: .8;
-    width: 30%;
+    width: 25%;
     height: 80%;
     border-radius: 10px;
     color: white;
+    padding: 2px;
 
     align-self: center;
     display: flex;
@@ -145,4 +146,5 @@ img {
     background-image: url("/images/buttons/no.png");
     background-size: 100%;
     box-shadow: 0 4px rgb(153, 0, 51);
+    margin-left: 8px;
 }
