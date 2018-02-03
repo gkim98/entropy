@@ -201,3 +201,27 @@ img {
     box-shadow: 0 4px rgb(153, 0, 51);
     margin-left: 8px;
 }
+
+#nameField, #name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+
+input[type="text"]
+{
+    background: transparent;
+    border: none;
+    height: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}

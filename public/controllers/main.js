@@ -132,6 +132,20 @@ function updateTime() {
   TIME.innerHTML = time;
 }
 
+var name;
 
 updateTime();
 setInterval(updateTime, 1000);
+
+var name;
+const NAME_FIELD = document.getElementById("nameField")
+
+NAME_FIELD.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        name = document.getElementById("nameField").value;
+        document.getElementById("questionBox2").style.visibility = "hidden";
+        document.getElementById("name").style.visibility = "visible"
+        document.getElementById("name").innerHTML = name;
+    }
+});
