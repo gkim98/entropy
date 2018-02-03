@@ -65,7 +65,7 @@ body, html {
 #weekday {
     font-size: 40px;
     color: white;
-    margin-top: 0px;
+    margin-top: -20px;
 }
 
 #facebook {
@@ -151,6 +151,22 @@ img {
     display: flex;
     justify-content: space-between;
     flex-grow: 0;
+}
+
+#shelf {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 30%;
+
+}
+
+#person1 {
+  position: absolute;
+  bottom: 2%;
+  left: 21.5%;
+  width: 4%;
+  border-radius: 25px;
 }
 
 .task {

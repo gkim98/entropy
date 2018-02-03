@@ -155,6 +155,9 @@ NAME_FIELD.addEventListener("keyup", function(event) {
 NAME.addEventListener("dblclick", function(event) {
   document.getElementById("questionBox2").style.visibility = "visible";
   NAME.style.visibility = "hidden"
+
+  NAME_FIELD.focus();
+  NAME_FIELD.select();
 });
 
 
