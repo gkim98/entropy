@@ -80,3 +80,10 @@ img{
   top: 0;
   right: 0;
 }
+
+#plant {
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  width: 25%;
+}
