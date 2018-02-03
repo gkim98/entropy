@@ -19,7 +19,7 @@ body, html {
     background-image: url("/images/pic1/Healthy.png");
 
     /* Full height */
-    height: 98%;
+    height: 100%;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -68,7 +68,7 @@ img {
     width: 100%;
     padding-bottom: 75%;
     position: absolute;
-    top: 50%; bottom: 0; left: 0; right: 0;
+    top: 30%; bottom: 0; left: 0; right: 0;
     margin: 0;
     transform: translate(0, -20%);
 }
@@ -136,11 +136,13 @@ img {
 }
 
 .goodButton {
-    background-color: rgb(0, 153, 51);
+    background-image: url("/images/buttons/yes.png");
+    background-size: 100%;
     box-shadow: 0 4px rgb(0, 102, 0);
 }
 
 .badButton {
-    background-color: rgb(204, 0, 0);
+    background-image: url("/images/buttons/no.png");
+    background-size: 100%;
     box-shadow: 0 4px rgb(153, 0, 51);
 }
