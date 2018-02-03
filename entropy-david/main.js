@@ -54,8 +54,6 @@ function startHealthDown() {
 }
 
 
-
-
 function updateTime() {
   var d = new Date();
   var time = hours[d.getHours()] ;

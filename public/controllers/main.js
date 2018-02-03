@@ -3,9 +3,11 @@ const TIME = document.getElementById("time");
 const WEEKDAY = document.getElementById("weekday");
 const PLANT = document.getElementById("plant");
 
+var increment = 30;
 
-var health = 50;
-setHealth(50);
+
+var health = 60;
+setHealth(60);
 var blink = true;
 
 var d = new Date();
@@ -25,40 +27,55 @@ $(".badButton").on("click", function() {
 // Hide scrollbars and disable scrolling
 $("body").css("overflow", "hidden");
 
+function updateFace(newHealth) {
+  if (newHealth<40) {
+    PLANT.src = "/images/plant/sad.png";
+  } else if(newHealth>60) {
+    PLANT.src = "/images/plant/happy.png";
+  } else {
+    PLANT.src = "/images/plant/neutral.png";
+  }
+
+}
+
 function setHealth(health) {
   BG.style.filter = "saturate(" + (health) + "%)";
 }
 
 function healthUp() {
-  health += 0.2;
-  setHealth(health)
-
-  if(health == original + 50) {
+  if(health >= original + increment) {
     clearInterval(myVar);
-
+  } else {
+    health += 0.2;
+    setHealth(health)
   }
+
+  console.log(health);
 }
 
 var original;
+var myVar;
 
 function startHealthUp() {
   original = health;
-  PLANT.src = "/images/plant/happy.png";
+  updateFace(health+increment);
   myVar = setInterval(healthUp, 1);
 }
 
 function healthDown() {
-  health -= 0.2;
-  setHealth(health)
-
-  if(health == original - 50) {
+  if(health <= original - increment) {
     clearInterval(myVar);
+  } else {
+    health -= 0.2;
+    setHealth(health)
   }
+
+  console.log(health);
 }
 
 function startHealthDown() {
   original = health;
-  PLANT.src = "/images/plant/sad.png";
+  updateFace(health-increment);
   myVar = setInterval(healthDown, 1);
 }
 
