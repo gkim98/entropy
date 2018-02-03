@@ -6,3 +6,34 @@
     font-size: 40px;
     margin: auto;
 }
+
+.question {
+    margin-top: 10px;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.Cbutton {
+    width: 100px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.Cbutton:hover {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.goodButton  {
+    background-color: rgb(0, 153, 51);
+    box-shadow: 0 4px rgb(0, 102, 0);
+}
+
+.badButton {
+    background-color: rgb(204, 0, 0);
+    box-shadow: 0 4px rgb(153, 0, 51);
+}
