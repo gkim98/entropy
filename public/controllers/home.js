@@ -7,5 +7,7 @@
 //     $(this).attr("color", "black");
 // });
 
-var header = document.querySelector("#header");
-header.style.color = "black";
+var boxItems = document.querySelectorAll("#questionBox *");
+boxItems.forEach(function(element) {
+    element.style.opacity = 1;
+});

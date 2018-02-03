@@ -16,10 +16,10 @@ body, html {
 
 .bg {
     /* The image used */
-    background-image: url("/images/Healthy.png");
+    background-image: url("/images/pic1/Healthy.png");
 
     /* Full height */
-    height: 100%;
+    height: 98%;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -31,22 +31,46 @@ body, html {
 #background {
     display: flex;
     justify-content: space-between;
+    padding: 2.5%;
+    box-sizing: border-box;
 }
 
 #timeDate {
-    margin-left: 20px;
+
 }
 
 #time {
     color: white;
     font-size: 80px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 #weekday {
     font-size: 40px;
     color: white;
     margin-top: 0px;
+}
+
+img {
+    width: 100%;
+}
+
+#plantContainer {
+    width: 30%;
+    align-self: flex-start;
+    position: relative;
+    height: 100%;
+
+}
+
+#plant {
+    width: 100%;
+    padding-bottom: 75%;
+    position: absolute;
+    top: 50%; bottom: 0; left: 0; right: 0;
+    margin: 0;
+    transform: translate(0, -20%);
 }
 
 #view {
@@ -60,14 +84,20 @@ body, html {
 #questionBox {
     float: right;
     background-color: black;
-    opacity: .6;
+    opacity: .8;
     width: 30%;
-    height: 100%;
+    height: 80%;
     border-radius: 10px;
     color: white;
 
+    align-self: center;
     display: flex;
     flex-direction: column;
+}
+
+#logo {
+    width: 80%;
+    padding: 10%;
 }
 
 .question {
