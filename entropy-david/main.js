@@ -1,7 +1,15 @@
-const SICK = document.getElementById("background");
+const BG = document.getElementById("background");
 const TIME = document.getElementById("time");
 const WEEKDAY = document.getElementById("weekday");
 
+const HAPPY = document.getElementById("plant-happy");
+const SAD = document.getElementById("plant-sad");
+const NEUTRAL = document.getElementById("plant-neutral");
+HAPPY.style.opacity = 0;
+SAD.style.opacity = 0;
+
+var health = 50;
+setHealth(50);
 var blink = true;
 
 var d = new Date();
@@ -12,9 +20,47 @@ var hours = ["12", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "
 // Hide scrollbars and disable scrolling
 $("body").css("overflow", "hidden");
 
-function changeHealth(health) {
-  SICK.style.filter = "saturate(" + (health) + "%)";
+function setHealth(health) {
+  BG.style.filter = "saturate(" + (health) + "%)";
 }
+
+function healthUp() {
+  health += 0.2;
+  setHealth(health)
+
+  if(health == original + 50) {
+    clearInterval(myVar);
+
+  }
+}
+
+var original;
+
+function startHealthUp() {
+  original = health;
+  NEUTRAL.style.opacity = 0;
+  HAPPY.style.opacity = 1;
+  myVar = setInterval(healthUp, 1);
+}
+
+function healthDown() {
+  health -= 0.2;
+  setHealth(health)
+
+  if(health == original - 50) {
+    clearInterval(myVar);
+  }
+}
+
+function startHealthDown() {
+  original = health;
+  NEUTRAL.style.opacity = 0;
+  SAD.style.opacity = 1;
+  myVar = setInterval(healthDown, 1);
+}
+
+
+
 
 function updateTime() {
   var d = new Date();
@@ -44,8 +90,6 @@ function updateTime() {
 
   TIME.innerHTML = time;
 }
-
-changeHealth(70)
 
 
 updateTime();
