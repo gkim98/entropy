@@ -5,3 +5,11 @@ Team: Daniel Zhou, David Cheng, Grant Kim, Jane Li, Vicki Lu
 Graphics created by Vicki Lu and Jane Li
 
 ![alt text](slides/1.jpg)
+![alt text](slides/2.jpg)
+![alt text](slides/3.jpg)
+![alt text](slides/4.jpg)
+![alt text](slides/5.jpg)
+![alt text](slides/6.jpg)
+![alt text](slides/7.jpg)
+![alt text](slides/8.jpg)
+![alt text](slides/9.jpg)
