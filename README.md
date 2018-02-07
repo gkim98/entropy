@@ -3,3 +3,5 @@ Entropy is a prototype of a project started at Duke Blueprint 2018. It was envis
 
 Team: Daniel Zhou, David Cheng, Grant Kim, Jane Li, Vicki Lu
 Graphics created by Vicki Lu and Jane Li
+
+![alt text](slides/1.jpg)
